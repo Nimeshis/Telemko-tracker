@@ -96,13 +96,6 @@ const SettingsMenu = () => {
         />
         {!readonly && (
           <>
-            <MenuItem
-              title={t("sharedNotifications")}
-              link="/settings/notifications"
-              icon={<NotificationsIcon />}
-              selected={location.pathname.startsWith("/settings/notification")}
-            />
-
             <ListItemButton onClick={handleSettingsClick}>
               <ListItemIcon>
                 <SettingsIcon />
@@ -227,22 +220,6 @@ const SettingsMenu = () => {
                     "/reports/travel"
                   )}
                 />
-                <MenuItem
-                  title={"Travel"}
-                  link="/settings/report/travel"
-                  icon={<DriveEtaIcon />}
-                  selected={location.pathname.startsWith(
-                    "/settings/report/travel"
-                  )}
-                />
-                <MenuItem
-                  title={"Travel"}
-                  link="/settings/report/travel"
-                  icon={<DriveEtaIcon />}
-                  selected={location.pathname.startsWith(
-                    "/settings/report/travel"
-                  )}
-                />
               </List>
             </Collapse>
 
@@ -272,47 +249,12 @@ const SettingsMenu = () => {
                 selected={location.pathname.startsWith("/settings/group")}
               />
             )}
-
-            {!features.disableCalendars && (
-              <MenuItem
-                title={t("sharedCalendars")}
-                link="/settings/calendars"
-                icon={<TodayIcon />}
-                selected={location.pathname.startsWith("/settings/calendar")}
-              />
-            )}
-            {!features.disableComputedAttributes && (
-              <MenuItem
-                title={t("sharedComputedAttributes")}
-                link="/settings/attributes"
-                icon={<StorageIcon />}
-                selected={location.pathname.startsWith("/settings/attribute")}
-              />
-            )}
-            {!features.disableMaintenance && (
-              <MenuItem
-                title={"Report"}
-                link="/settings/maintenances"
-                icon={<AssessmentIcon />}
-                selected={location.pathname.startsWith("/settings/maintenance")}
-              />
-            )}
             {!features.disableSavedCommands && (
               <MenuItem
                 title={t("sharedSavedCommands")}
                 link="/settings/commands"
                 icon={<PublishIcon />}
                 selected={location.pathname.startsWith("/settings/command")}
-              />
-            )}
-            {!features.disableGroups && (
-              <MenuItem
-                title={"Notification"}
-                link="/settings/notificaitons"
-                icon={<AssessmentIcon />}
-                selected={location.pathname.startsWith(
-                  "/settings/notifications"
-                )}
               />
             )}
             {supportLink && (
